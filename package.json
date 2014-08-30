@@ -1,6 +1,6 @@
 {
-  "name": "node-mssql-test",
-  "version": "1.0.0",
+  "name": "mssql2asciidoc",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {

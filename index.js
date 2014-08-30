@@ -81,14 +81,14 @@ var co = new sql.Connection(config, function(err) {
 
         schemas[0].forEach(function(sc) {
             var schema = sc['SCHEMA_NAME'];
-            var q_tables = "SELECT * FROM TISAPWF.INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='" + schema + "'";
+            var q_tables = "SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='" + schema + "'";
 
             rq1.query(q_tables, function(err, tables) {
                 tables[0].forEach(function(tbl) {
                     var table = tbl['TABLE_NAME'];
                     //console.log('Table: ' + table);
 
-                    var q_colums = "SELECT * FROM TISAPWF.INFORMATION_SCHEMA.COLUMNS ";
+                    var q_colums = "SELECT * FROM INFORMATION_SCHEMA.COLUMNS ";
                     q_colums += "WHERE TABLE_SCHEMA='" + schema + "' ";
                     q_colums += "AND TABLE_NAME ='" + table + "'";
 
@@ -126,7 +126,7 @@ var co = new sql.Connection(config, function(err) {
                             //console.log('TZ');
                         });
                         line.pop();
-                        
+
                         res.push(line.join(''));
                         res.push('|==== ');
                         console.log(res.join('\n'));
