@@ -1,5 +1,5 @@
 {
-  "name": "mssql2asciidoc",
+  "name": "sql2asciidoc",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
