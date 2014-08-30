@@ -109,7 +109,7 @@ var co = new sql.Connection(config, function(err) {
                         }   
                             
                         res.push('\n=== ' + table);
-                        res.push('[options="header"]');
+                        res.push('[width="80%",frame="topbot",options="header,footer"]');
                         res.push('|==== ');
                         res.push('| Column name | Nullable | Type | Size ');
             
