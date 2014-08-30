@@ -25,41 +25,41 @@ var ops = stdio.getopt({
     },
     'database': {
         key: 'd',
-        description: 'DB name',
+        description: 'Database name',
         mandatory: true,
-        args: 1
-    },
-    'table': {
-        key: 't',
-        description: 'Table name',
-        mandatory: false,
         args: 1
     },
     'schema': {
         key: 'c',
-        description: 'Schemas',
+        description: 'Comma separated list of schemas. All if null.',
         mandatory: false,
         args: 1
-    },
+    }//,
+    // 'output':
+    // {
+    //     key:'o',
+    //     description:'Output file',
+    //     mandatory: true,
+    //     args: 1
+    // }
 
 });
 
 //console.log(ops);
-
 var config = {
-    user: ops['login'],
-    password: ops['pass'],
-    server: ops['server'], // You can use 'localhost\\instance' to connect to named instance
-    database: ops['database'],
+    user     : ops['login'],
+    password : ops['pass'],
+    server   : ops['server'], // You can use 'localhost\\instance' to connect to named instance
+    database : ops['database'],
 
     options: {
         encrypt: false // Use this if you're on Windows Azure
     }
 }
 
-console.log('connecting...');
+//console.info('connecting...');
 var co = new sql.Connection(config, function(err) {
-    console.log('connected!');
+    //console.info('connected!');
     // ... error checks
     if (err) console.log(err);
 
@@ -70,19 +70,25 @@ var co = new sql.Connection(config, function(err) {
     if (ops['schema'])
         q_schemas += "WHERE SCHEMA_NAME = '" + ops['schema'] + "'";
 
+    q_schemas += " ORDER BY SCHEMA_NAME ASC ";
+
     rq1.on('done', function(retVal) {
-        console.log('DONE MAIN');
+        console.info('DONE MAIN');
     });
 
     rq1.query(q_schemas, function(err, schemas) {
         if (err) console.log(err);
         
-        console.log("Schema found: " + schemas[0].length);
+        //console.info("Schema found: " + schemas[0].length);
 
+        var lastSchema = "";
         schemas[0].forEach(function(sc) {
             var schema = sc['SCHEMA_NAME'];
-            var q_tables = "SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='" + schema + "'";
-
+            var q_tables = "SELECT * FROM INFORMATION_SCHEMA.TABLES "
+            // if (ops['Tables']) 
+                 q_tables += "WHERE TABLE_SCHEMA='" + schema + "'";
+            q_tables += " ORDER BY TABLE_SCHEMA, TABLE_NAME ASC ";
+            
             rq1.query(q_tables, function(err, tables) {
                 tables[0].forEach(function(tbl) {
                     var table = tbl['TABLE_NAME'];
@@ -97,11 +103,15 @@ var co = new sql.Connection(config, function(err) {
                     rq1.query(q_colums, function(err, cols) {
                         //console.log(cols[0]);               // here we have an array of columns for a given schema.table
 
-                        res.push('\n== ' + schema);
-                        res.push('\n.' + table);
-                        res.push('[options="header]');
+                        if(!lastSchema | lastSchema!== schema) {              // we print the schame name as chapter only if this is a new one
+                            res.push('\n== ' + schema);
+                            lastSchema=schema;
+                        }   
+                            
+                        res.push('\n=== ' + table);
+                        res.push('[options="header"]');
                         res.push('|==== ');
-                        res.push('| Column | Nullable | Type | Size ');
+                        res.push('| Column name | Nullable | Type | Size ');
             
                         var line = [];
 
