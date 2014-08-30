@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-node_modules
 test.adoc
-=======
+
 # Logs
 logs
 *.log
@@ -27,4 +25,3 @@ build/Release
 # Deployed apps should consider commenting this line out:
 # see https://npmjs.org/doc/faq.html#Should-I-check-my-node_modules-folder-into-git
 node_modules
->>>>>>> d090286db27fa3f97e40e446516601f56447cc21
