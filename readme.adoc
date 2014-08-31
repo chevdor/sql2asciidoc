@@ -37,7 +37,7 @@ USAGE: node index.js [OPTION1] [OPTION2]... arg1 arg2...
   -c, --schema <ARG1>   	Comma separated list of schemas. All if null.
 ----
 
-==== Examples
+=== Examples
 .No filtering, all schemas, all tables
 [source, shell]
 ----
@@ -105,3 +105,9 @@ If you want to help with the following, please feel free to propose merge reques
 
 .Issues
 . Closing the connection is not handled properly
+
+== License
+
+----
+include::LICENSE[]
+----
