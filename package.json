@@ -19,7 +19,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "http://github.com/chevdir/sql2asciidoc.git"
+        "url": "http://github.com/chevdor/sql2asciidoc.git"
     },
     "devDependencies": {
         "conventional-changelog": "0.0.11",
