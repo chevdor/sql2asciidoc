@@ -12,7 +12,7 @@ It connects to your database, discovers the schemas and tables then generates an
 
 The output using the https://chrome.google.com/webstore/detail/asciidoctorjs-live-previe/iaalpfgpbocpdfblpnhhgllgbdbchmia[Asciidoctor Live Preview Chrome Extension] for one table looks like:
 
-image:images/Screenshot01.png[]
+image:https://raw.githubusercontent.com/chevdor/sql2asciidoc/master/images/Screenshot01.png[]
 
 Of course you can include this asciidoc text into your documents and render that as HTML, PDF, ePub, etc...
 
@@ -89,25 +89,12 @@ node index.js -s "myserver\MyInstance" -d MYDB -c dbo
 
 ----
 
-
 == Limitations & knownn issues
 
-If you want to help with the following, please feel free to propose merge requests.
-
-.Improvements
-. For now not available as global command
-. Output is not really customizable
-. Auth is limited to user+password
-. Cannot filter a *list* of schemas
-. Using jsont ?
-. Putting those stuff in the issue tracker
-. Not yet possible to select the column properties
-
-.Issues
-. Closing the connection is not handled properly
+See the https://github.com/chevdor/sql2asciidoc/issues[issue tracker].
 
 == License
 
 ----
-include::LICENSE[]
+include::https://raw.githubusercontent.com/chevdor/sql2asciidoc/master/LICENSE[]
 ----

@@ -99,48 +99,9 @@ node index.js -s "myserver\MyInstance" -d MYDB -c dbo
 Limitations & knownn issues
 ===========================
 
-If you want to help with the following, please feel free to propose
-merge requests.
-
-1.  For now not available as global command
-
-2.  Output is not really customizable
-
-3.  Auth is limited to user+password
-
-4.  Cannot filter a **list** of schemas
-
-5.  Using jsont ?
-
-6.  Putting those stuff in the issue tracker
-
-7.  Not yet possible to select the column properties
-
-<!-- -->
-
-1.  Closing the connection is not handled properly
+See the [issue tracker](https://github.com/chevdor/sql2asciidoc/issues).
 
 License
 =======
 
-    The MIT License (MIT)
 
-    Copyright (c) 2014 Chevdor
-
-    Permission is hereby granted, free of charge, to any person obtaining a copy
-    of this software and associated documentation files (the "Software"), to deal
-    in the Software without restriction, including without limitation the rights
-    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-    copies of the Software, and to permit persons to whom the Software is
-    furnished to do so, subject to the following conditions:
-
-    The above copyright notice and this permission notice shall be included in all
-    copies or substantial portions of the Software.
-
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-    SOFTWARE.
