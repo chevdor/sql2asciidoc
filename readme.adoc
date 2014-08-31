@@ -95,6 +95,5 @@ See the https://github.com/chevdor/sql2asciidoc/issues[issue tracker].
 
 == License
 
-----
+MIT
 include::https://raw.githubusercontent.com/chevdor/sql2asciidoc/master/LICENSE[]
-----

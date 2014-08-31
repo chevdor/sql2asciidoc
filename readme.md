@@ -14,7 +14,7 @@ The output using the [Asciidoctor Live Preview Chrome
 Extension](https://chrome.google.com/webstore/detail/asciidoctorjs-live-previe/iaalpfgpbocpdfblpnhhgllgbdbchmia)
 for one table looks like:
 
-![](images/Screenshot01.png)
+![](https://raw.githubusercontent.com/chevdor/sql2asciidoc/master/images/Screenshot01.png)
 
 Of course you can include this asciidoc text into your documents and
 render that as HTML, PDF, ePub, etc…
@@ -104,4 +104,5 @@ See the [issue tracker](https://github.com/chevdor/sql2asciidoc/issues).
 License
 =======
 
+MIT
 

@@ -1,34 +1,38 @@
 {
-  "name": "sql2asciidoc",
-  "version": "0.3.0",
-  "description": "",
-  "bin": {
-    "sql2asciidoc": "./sql2asciidoc.js"
-  },
-  "preferGlobal": true,
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "MIT",
-  "dependencies": {
-    "jsont": "^0.1.2",
-    "mssql": "^1.2.0",
-    "stdio": "^0.2.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "http://github.com/chevdir/sql2asciidoc.git"
-  },
-  "devDependencies": {
-    "conventional-changelog": "0.0.11",
-    "gulp": "^3.8.7",
-    "gulp-bump": "^0.1.11",
-    "gulp-pandoc": "^0.2.0",
-    "gulp-print": "^1.1.0",
-    "gulp-rimraf": "^0.1.0",
-    "gulp-run": "^1.6.4",
-    "gulp-shell": "^0.2.9"
-  }
+    "name": "sql2asciidoc",
+    "version": "0.3.1",
+    "description": "",
+    "bin": {
+        "sql2asciidoc": "./sql2asciidoc.js"
+    },
+    "preferGlobal": true,
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "jsont": "^0.1.2",
+        "mssql": "^1.2.0",
+        "stdio": "^0.2.2"
+    },
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/chevdir/sql2asciidoc.git"
+    },
+    "devDependencies": {
+        "conventional-changelog": "0.0.11",
+        "gulp": "^3.8.7",
+        "gulp-bump": "^0.1.11",
+        "gulp-pandoc": "^0.2.0",
+        "gulp-print": "^1.1.0",
+        "gulp-rimraf": "^0.1.0",
+        "gulp-shell": "^0.2.9"
+    },
+    "keywords": [
+        "sql",
+        "documentation",
+        "asciidoc"
+    ]
 }
