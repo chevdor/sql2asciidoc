@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var sql = require('mssql');
 // var jsont = require('jsont')();
 // var template = require('./my-template.json');
