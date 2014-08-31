@@ -4,6 +4,7 @@ var sql = require('mssql');
 // var jsont = require('jsont')();
 // var template = require('./my-template.json');
 var stdio = require('stdio');
+var pjson = require("./package.json");
 
 var ops = stdio.getopt({
     'server': {
@@ -28,7 +29,7 @@ var ops = stdio.getopt({
     'database': {
         key: 'd',
         description: 'Database name',
-        mandatory: true,
+        mandatory: false,
         args: 1
     },
     'schema': {
@@ -36,14 +37,12 @@ var ops = stdio.getopt({
         description: 'Comma separated list of schemas. All if null.',
         mandatory: false,
         args: 1
-    }//,
-    // 'output':
-    // {
-    //     key:'o',
-    //     description:'Output file',
-    //     mandatory: true,
-    //     args: 1
-    // }
+    },
+    'version': {
+        key:'v',
+        description:'Displays current version',
+        args: 1
+    }
 
 });
 
@@ -58,11 +57,24 @@ var config = {
     }
 }
 
+if (ops['version']){
+    console.log(pjson.name + ' version ' + pjson.version);
+    process.exit(0);
+} else{
+    if(!ops['database']){
+        console.log('Please provide at the very least the database name. Use --help for details.');
+        process.exit(1);
+    }
+}
+
 //console.info('connecting...');
 var co = new sql.Connection(config, function(err) {
     //console.info('connected!');
     // ... error checks
-    if (err) throw (err);
+    if (err) {
+        console.log (err);
+        process.exit(1);
+    }
 
     var rq1 = new sql.Request(co);
     rq1.multiple = true;
