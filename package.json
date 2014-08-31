@@ -1,8 +1,10 @@
 {
   "name": "sql2asciidoc",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "",
-  "bin": {"sql2asciidoc": "./sql2asciidoc.js"},
+  "bin": {
+    "sql2asciidoc": "./sql2asciidoc.js"
+  },
   "preferGlobal": true,
   "main": "index.js",
   "scripts": {
@@ -15,8 +17,8 @@
     "mssql": "^1.2.0",
     "stdio": "^0.2.2"
   },
-  "repository" :
-  { "type" : "git"
-  , "url" : "http://github.com/chevdir/sql2asciidoc.git"
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/chevdir/sql2asciidoc.git"
   }
 }
