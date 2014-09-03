@@ -19,7 +19,7 @@ Of course you can include this asciidoc text into your documents and render that
 NOTE: You do not have to run this on a Windows machine as long as you can connect to your DB remotely.
 
 == Installation
-This is a regular npm package.
+This is a regular npm package. You can find it here: https://www.npmjs.org/package/sql2asciidoc
 
 ----
 npm install sql2asciidoc
