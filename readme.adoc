@@ -2,7 +2,9 @@
 Chevdor
 v0.1.0
 
-image::https://badge.waffle.io/chevdor/sql2asciidoc.svg?label=ready&title=Ready[link="http://waffle.io/chevdor/sql2asciidoc"]
+image::https://badge.waffle.io/chevdor/sql2asciidoc.svg?label=in_progress&title=in_progress[link="http://waffle.io/chevdor/sql2asciidoc"]
+
+image::https://badge.waffle.io/chevdor/sql2asciidoc.svg?label=Done&title=Done[link="http://waffle.io/chevdor/sql2asciidoc"]
 
 == What is sql2asciidoc?
 
