@@ -9,7 +9,6 @@ var pjson = require("./package.json");
 var ops = stdio.getopt({
     'server': {
         key: 's',
-        args: 2,
         description: 'Server\\Instance',
         args: 1,
         default: 'localhost'
